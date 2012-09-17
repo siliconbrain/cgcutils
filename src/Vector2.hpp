@@ -14,7 +14,7 @@ public:
     /**
      * Create (x,y) vector.
      * @param x x coordinate of the vector
-     * @param x y coordinate of the vector
+     * @param y y coordinate of the vector
      */
     Vector2(float x, float y);
 
@@ -59,6 +59,13 @@ public:
     bool operator ==(const Vector2& other) const;
 
     bool operator !=(const Vector2& other) const;
+
+    /**
+     * Returns the dot product of this and the specified vector.
+     * @param other the other vector
+     * @return the dot product
+     */
+    float dot(const Vector2& other) const;
 
     /**
      * Get the length of the vector.
