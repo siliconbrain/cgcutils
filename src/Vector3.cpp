@@ -14,6 +14,21 @@ Vector3::Vector3(const Vector3& other) : x(other.x), y(other.y), z(other.z)
 {
 }
 
+float Vector3::getX() const
+{
+    return x;
+}
+
+float Vector3::getY() const
+{
+    return y;
+}
+
+float Vector3::getZ() const
+{
+    return z;
+}
+
 Vector3 Vector3::operator +(const Vector3& other) const
 {
     return Vector3(x + other.x, y + other.y, z + other.z);

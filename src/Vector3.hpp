@@ -1,6 +1,9 @@
-#ifndef __GFXUTIL_VECTOR3_HPP__
-#define __GFXUTIL_VECTOR3_HPP__
+#ifndef __CGCUTILS_VECTOR3_HPP__
+#define __CGCUTILS_VECTOR3_HPP__
 
+/**
+ * A 3 dimensional vector class.
+ */
 class Vector3
 {
     float x, y, z;
@@ -24,6 +27,12 @@ public:
      * @param other source vector to copy
      */
     Vector3(const Vector3& other);
+
+    float getX() const;
+
+    float getY() const;
+
+    float getZ() const;
 
     Vector3 operator +(const Vector3& other) const;
 
@@ -62,4 +71,4 @@ public:
 
 Vector3 operator *(const float scalar, const Vector3& vector);
 
-#endif
+#endif // __CGCUTILS_VECTOR3_HPP__

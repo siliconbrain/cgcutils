@@ -1,5 +1,5 @@
-#ifndef __GFXUTIL_RAY_HPP__
-#define __GFXUTIL_RAY_HPP__
+#ifndef __CGCUTILS_RAY_HPP__
+#define __CGCUTILS_RAY_HPP__
 
 template<typename T>
 class Ray
@@ -26,4 +26,4 @@ public:
     }
 };
 
-#endif
+#endif // __CGCUTILS_RAY_HPP__

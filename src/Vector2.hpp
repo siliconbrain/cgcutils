@@ -1,6 +1,9 @@
-#ifndef __GFXUTIL_VECTOR2_HPP__
-#define __GFXUTIL_VECTOR2_HPP__
+#ifndef __CGCUTILS_VECTOR2_HPP__
+#define __CGCUTILS_VECTOR2_HPP__
 
+/**
+ * A 2 dimensional vector class.
+ */
 class Vector2
 {
     float x, y;
@@ -80,7 +83,8 @@ public:
     float angle() const;
 
     /**
-     * Normalizes the vector.
+     * Normalize the vector.
+     * This function makes the vector into unit size but still pointing into the same direction.
      * @return reference to self
      */
     Vector2& normalize();
@@ -108,4 +112,4 @@ public:
 
 Vector2 operator *(const float scalar, const Vector2& vector);
 
-#endif
+#endif // __CGCUTILS_VECTOR2_HPP__
