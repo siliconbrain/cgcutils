@@ -39,11 +39,6 @@ Vector2 Vector2::operator -() const
     return Vector2(-x, -y);
 }
 
-Vector2 Vector2::operator *(const Vector2& other) const
-{
-    return Vector2(x * other.x, y * other.y);
-}
-
 Vector2 Vector2::operator *(const float scalar) const
 {
     return Vector2(x * scalar, y * scalar);
@@ -74,15 +69,7 @@ float Vector2::length() const
     return sqrt(x * x + y * y);
 }
 
-Vector2& Vector2::normalize()
-{
-    float li = 1.0f / length();
-    x *= li;
-    y *= li;
-    return *this;
-}
-
-Vector2 Vector2::normalized() const
+Vector2 Vector2::unit() const
 {
     float li = 1.0f / length();
     return Vector2(x * li, y * li);
@@ -93,18 +80,7 @@ float Vector2::angle() const
     return atan2(y, x);
 }
 
-Vector2& Vector2::rotate(const float angle)
-{
-    float x0 = x;
-    float s = sin(angle);
-    float c = cos(angle);
-
-    x = x0 * c - y * s;
-    y = x0 * s + y * c;
-    return *this;
-}
-
-Vector2 Vector2::rotated(const float angle) const
+Vector2 Vector2::rotate(const float angle) const
 {
     float s = sin(angle);
     float c = cos(angle);

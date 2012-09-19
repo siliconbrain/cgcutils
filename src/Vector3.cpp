@@ -44,11 +44,6 @@ Vector3 Vector3::operator -() const
     return Vector3(-x, -y, -z);
 }
 
-Vector3 Vector3::operator *(const Vector3& other) const
-{
-    return Vector3(x * other.x, y * other.y, z * other.z);
-}
-
 Vector3 Vector3::operator *(const float scalar) const
 {
     return Vector3(x * scalar, y * scalar, z * scalar);
@@ -79,16 +74,7 @@ float Vector3::length() const
     return sqrt(x * x + y * y + z * z);
 }
 
-Vector3& Vector3::normalize()
-{
-    float li = 1.0f / length();
-    x *= li;
-    y *= li;
-    z *= li;
-    return *this;
-}
-
-Vector3 Vector3::normalized() const
+Vector3 Vector3::unit() const
 {
     float li = 1.0f / length();
     return Vector3(x * li, y * li, z * li);

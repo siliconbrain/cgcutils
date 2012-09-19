@@ -53,8 +53,6 @@ public:
 
     Vector2 operator -() const;
 
-    Vector2 operator *(const Vector2& other) const;
-
     Vector2 operator *(const float scalar) const;
 
     Vector2 operator /(const float scalar) const;
@@ -83,31 +81,17 @@ public:
     float angle() const;
 
     /**
-     * Normalize the vector.
-     * This function makes the vector into unit size but still pointing into the same direction.
-     * @return reference to self
-     */
-    Vector2& normalize();
-
-    /**
-     * Create unit vector from this.
+     * Create a unit sized vector pointing to the same direction as this.
      * @return unit vector with same orientation as this
      */
-    Vector2 normalized() const;
-
-    /**
-     * Rotates the vector CCW with the specified angle.
-     * @param angle angle to rotate with in radians
-     * @return reference to self
-     */
-    Vector2& rotate(const float angle);
+    Vector2 unit() const;
 
     /**
      * Create a vector rotated CCW from this with the specified angle.
      * @param angle angle to rotate with in radians
      * @return new, rotated vector
      */
-    Vector2 rotated(const float angle) const;
+    Vector2 rotate(const float angle) const;
 };
 
 Vector2 operator *(const float scalar, const Vector2& vector);

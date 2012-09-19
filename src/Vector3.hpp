@@ -40,8 +40,6 @@ public:
 
     Vector3 operator -() const;
 
-    Vector3 operator *(const Vector3& other) const;
-
     Vector3 operator *(const float scalar) const;
 
     bool operator ==(const Vector3& other) const;
@@ -64,9 +62,7 @@ public:
 
     float length() const;
 
-    Vector3& normalize();
-
-    Vector3 normalized() const;
+    Vector3 unit() const;
 };
 
 Vector3 operator *(const float scalar, const Vector3& vector);
